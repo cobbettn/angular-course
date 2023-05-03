@@ -12,9 +12,15 @@ export class RecipesService {
 
   recipeSelected = new EventEmitter<Recipe>();
 
+  constructor() { }
+
   getRecipes() {
     return [...this.recipes];
   }
 
-  constructor() { }
+  selectRecipe(recipe: Recipe) {
+    this.recipeSelected.emit(recipe);
+  }
+
+
 }
