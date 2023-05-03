@@ -15,6 +15,7 @@ import { BasicHighlightDirective } from './basic-hightlight-directive';
 import { BetterHightlightDirective } from './better-hightlight.directive';
 import { UnlessDirective } from './unless.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { LoggingService } from './shared/services/logging.service';
 
 @NgModule({
   declarations: [
