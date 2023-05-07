@@ -6,14 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  recipes = 'recipes';
-  shoppingList = 'shoppingList';
 
-  pageDisplayed: string = this.recipes; // default
-
-  constructor() { }
-
-  handleNavEvent(event: string) {
-    this.pageDisplayed = event;
-  }
 }
