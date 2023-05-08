@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { ShoppingListService } from 'src/app/shopping-list/shopping-list.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { RecipesComponent } from '../recipes.component';
 import { RecipesService } from '../recipes.service';
@@ -22,7 +22,7 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
   ) {  }
 
   ngOnInit(): void {
-    this.recipeSub = this.route.params.subscribe(params => {
+    this.recipeSub = this.route.params.subscribe((params: Params) => {
       this.selectedRecipe = this.recipeSvc.selectRecipe(params['id']);
     })
   }
