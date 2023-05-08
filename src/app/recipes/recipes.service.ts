@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 
@@ -17,7 +17,6 @@ export class RecipesService {
     ])
   ];
 
-  recipeSelected = new EventEmitter<Recipe>();
 
   constructor() { }
 
@@ -25,8 +24,8 @@ export class RecipesService {
     return [...this.recipes];
   }
 
-  selectRecipe(recipe: Recipe) {
-    this.recipeSelected.emit(recipe);
+  selectRecipe(index: number) {
+    return this.recipes[index];
   }
 
 

@@ -10,9 +10,4 @@ import { RecipesService } from '../../recipes.service';
 export class RecipeItemComponent {
   @Input() recipe: Recipe;
   constructor(private recipesService: RecipesService) { }
-
-  handleRecipeSelect() {
-    this.recipesService.selectRecipe(this.recipe);
-  }
-
 }
