@@ -14,12 +14,10 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   sub: Subscription;
 
   constructor(private route: ActivatedRoute) {
-    console.log('created')
   }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe((params: Params) => {
-      console.log('params', params);
       this.createMode = params['id'] === undefined;
     });
   }

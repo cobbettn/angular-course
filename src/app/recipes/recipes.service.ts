@@ -17,7 +17,6 @@ export class RecipesService {
     ])
   ];
 
-
   constructor() { }
 
   getRecipes() {
@@ -27,6 +26,4 @@ export class RecipesService {
   selectRecipe(index: number) {
     return this.recipes[index];
   }
-
-
 }
